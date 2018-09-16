@@ -1,31 +1,11 @@
 import React, { Component } from 'react'
+import { Nav } from './common/Nav'
+import { Home } from './components/Home'
+import { Login } from './components/Login'
+
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-)
-
-const Login = () => (
-  <div>
-    <h1>Login</h1>
-  </div>
-)
-
-const Nav = () => {
-  return (
-    <div>
-      <Link to="/">
-        <button className="btn">Home</button>
-      </Link>
-      <Link to="/login">
-        <button className="btn">Login</button>
-      </Link>
-    </div>
-  )
-}
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
