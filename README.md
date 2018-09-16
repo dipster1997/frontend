@@ -15,15 +15,14 @@
 1. Install dependencies
     > `npm install`
 
-
-<br/>
+### Testing
+    npm test
 
 ### Run
     npm start
 
 Running at http://localhost:3003
 
-<br/>
 <br/>
 
 # FAQ
