@@ -1,13 +1,17 @@
-import React, { Component } from 'react'
-import { Nav } from './common/Nav'
-import { Home } from './components/Home'
-import { Login } from './components/Login'
+import React, { Component } from 'react';
+import { Nav } from './common/Nav';
+import { Home } from './components/Home';
+import { Login } from './components/Login';
+import { connect } from 'react-redux';
 
 import './App.css';
 
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
+  constructor(props) {
+    
+  }
   render() {
     return (
       <Router>
@@ -26,4 +30,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default connect()(App);
