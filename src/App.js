@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
-import { Nav } from './common/Nav';
-import { Home } from './components/Home';
-import { Login } from './components/Login';
+import Home from './components/Home';
+import Login from './components/Login';
+import { history } from "./common/history";
+import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
-
+import { Router } from 'react-router';
+import { Route } from 'react-router-dom';
 import './App.css';
-
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
   constructor(props) {
-    
+    super(props);
   }
+
   render() {
     return (
-      <Router>
+      <Router history={history}>
         <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Welcome</h1>
-              <Nav />
-          </header>
-          <div>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-          </div>
+          <Route exact path="/" render={() => (localStorage.getItem("user") ? <Home/> :
+              <Redirect to={{pathname: "/login"}}/>
+          )}/>
+          <Route exact path="/login" component={Login} />
         </div>
       </Router>
     );
   }
 }
 
-export default connect()(App);
+const mapStateToProp = state => {
+
+}
+
+export default connect(mapStateToProp)(App);
