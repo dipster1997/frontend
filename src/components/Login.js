@@ -7,7 +7,7 @@ class Login extends React.Component {
     super(props);
 
     this.state = {
-      username: '',
+      email: '',
       password: ''
     }
 
@@ -27,16 +27,16 @@ class Login extends React.Component {
   }
 
   submitLogin(e) {
-    const { username, password } = this.state;
+    const { email, password } = this.state;
     const { dispatch } = this.props;
     console.log(this.props);
-    dispatch(userActions.login(username, password));
+    dispatch(userActions.login(email, password));
   }
 
   render() {
     return(<div>
       <h1>Login</h1>
-      <input type="text" name="username" placeholder="User Name" onChange={this.handleChange}/><br/>
+      <input type="email" name="email" placeholder="Email Address" onChange={this.handleChange}/><br/>
       <input type="password" name="password" placeholder="Password" onChange={this.handleChange}/><br/>
 
       {/*TODO:
