@@ -4,8 +4,7 @@ import Login from './components/Login';
 import { history } from "./common/history";
 import { Redirect } from "react-router-dom";
 import { connect } from 'react-redux';
-import { Router } from 'react-router';
-import { Route } from 'react-router-dom';
+import { Router, Route } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +28,6 @@ class App extends Component {
 
 const mapStateToProp = state => {
 
-}
+};
 
 export default connect(mapStateToProp)(App);
