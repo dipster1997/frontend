@@ -21,3 +21,8 @@ yarn-debug.log*
 yarn-error.log*
 package.json
 package-lock.json
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/is3106-frontend.iml
